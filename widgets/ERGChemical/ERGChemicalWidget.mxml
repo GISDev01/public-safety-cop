@@ -714,7 +714,9 @@
             private function onChemicalSpillResult(gpResult:GeoprocessorEvent,token:Object = null):void
             {
                 gp.addEventListener(GeoprocessorEvent.GET_RESULT_DATA_COMPLETE,onGetChemicalResult);
-                gp.getResultData(gpResult.jobInfo.jobId,"outerg");
+                //Changed below 
+             			//gp.getResultData(gpResult.jobInfo.jobId,"outerg");
+            				gp.getResultData(gpResult.jobInfo.jobId,"outerg_shp");
             }
 
             private function onGetChemicalResult(gpResult:GeoprocessorEvent,token:Object = null):void
